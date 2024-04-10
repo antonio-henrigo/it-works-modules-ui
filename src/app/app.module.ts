@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CustomSidenavComponent } from './components/custom-sidenav/custom-sidenav.component'
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 import { SalesCockpitComponent } from './pages/web-pouch/sales-cockpit/sales-cockpit.component';
 import { NfsIntegrationComponent } from './pages/web-pouch/nfs-integration/nfs-integration.component';
 import { CalculationGuidesComponent } from './pages/web-pouch/calculation-guides/calculation-guides.component';
@@ -24,12 +26,11 @@ import { ProductReviewComponent } from './pages/review/product-review/product-re
 import { NationalSimpleSegregationComponent } from './pages/segregation/national-simple-segregation/national-simple-segregation.component';
 import { EmissionPgdasComponent } from './pages/segregation/emission-pgdas/emission-pgdas.component';
 import { OperationsSimulatorComponent } from './pages/product-consultation/operations-simulator/operations-simulator.component';
-
 import { NationalSimpleRecoveryComponent } from './pages/recovery/national-simple-recovery/national-simple-recovery.component';
 import { WebPouchComponent } from './pages/web-pouch/web-pouch/web-pouch.component';
-import { RouterModule } from '@angular/router';
 import { SituationViewComponent } from './pages/web-pouch/situation-view/situation-view.component';
 import { FreeProductConsultationComponent } from './pages/product-consultation/free-product-consultation/free-product-consultation.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { FreeProductConsultationComponent } from './pages/product-consultation/f
     MatSidenavModule,
     MatListModule,
     RouterModule,
+    MatTooltipModule
   ],
   providers: [
     provideAnimationsAsync()

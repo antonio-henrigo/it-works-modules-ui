@@ -1,7 +1,10 @@
 import { Component, Input, OnInit, computed, signal } from '@angular/core';
+
 import { ModulesService } from '../../service/modules.service';
 import { menuArray } from '../../shared/menuArray';
 import { take } from 'rxjs';
+import { TooltipPosition } from '@angular/material/tooltip';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-custom-sidenav',
@@ -9,6 +12,9 @@ import { take } from 'rxjs';
   styleUrl: './custom-sidenav.component.scss'
 })
 export class CustomSidenavComponent implements OnInit {
+
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+  position = new FormControl(this.positionOptions[2]);
 
   sideNavCollapsed = signal(false)
   isMenuItemClicked = false;
