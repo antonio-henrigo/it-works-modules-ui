@@ -12,7 +12,4 @@ export class AppComponent {
   collapsed = signal(false);
   sidenavWidth = computed(() => this.collapsed() ? '64px' :  '300px');
 
-  toggleSidenav(): void {
-    this.collapsed.set(!this.collapsed());
-  }
 }
