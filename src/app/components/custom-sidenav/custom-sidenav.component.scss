@@ -1,0 +1,33 @@
+.logo{
+  height: 50px;
+  margin: 40px;
+}
+
+.sidenav-header {
+  padding-top: 24px;
+  text-align: center;
+}
+
+.module-header {
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.module-header mat-icon {
+  margin-right: 8px;
+}
+
+.module-header:hover {
+  color: #7F7E7E;
+}
+
+.submodule-header {
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.submodule-header mat-icon {
+  margin-right: 8px;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
   title = 'it-works-modules-ui';
+
+  collapsed = signal(false);
+  sidenavWidth = computed(() => this.collapsed() ? '64px' :  '300px');
 }

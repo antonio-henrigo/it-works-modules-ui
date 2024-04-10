@@ -1,0 +1,23 @@
+<div class="sidenav-header">
+  <img
+    [width]="profileSize()"
+    [height]="profileSize()"
+    src="/assets/image/logo-itworks.png"
+    alt="logo-itworks"
+  />
+</div>
+<mat-nav-list>
+  <ng-container *ngFor="let module of modules">
+    <mat-list-item class="module-header" (click)="toggleSubModules(module); isMenuItemClicked = false">
+      <mat-icon matListItemIcon>{{ getIconForModule(module.Descricao) }}</mat-icon>
+      <span matListItemTitle *ngIf="!sideNavCollapsed()">{{ module.Descricao }}</span>
+    </mat-list-item>
+    <ng-container *ngIf="module.showSubModules || isMenuItemClicked">
+      <mat-list-item class="submodule-header" *ngFor="let subModule of module.subModulos">
+        <span matListItemTitle [routerLink]="subModule.route">{{ subModule.Descricao }}</span>
+      </mat-list-item>
+    </ng-container>
+  </ng-container>
+</mat-nav-list>
+
+
