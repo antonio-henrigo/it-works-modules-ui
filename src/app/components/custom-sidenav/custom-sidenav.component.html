@@ -8,11 +8,11 @@
 </div>
 <mat-nav-list>
   <ng-container *ngFor="let module of modules">
-    <mat-list-item class="module-header" (click)="toggleSubModules(module); isMenuItemClicked = false">
+    <mat-list-item class="module-header" (click)="toggleSubModules(module)">
       <mat-icon matListItemIcon>{{ getIconForModule(module.Descricao) }}</mat-icon>
       <span matListItemTitle *ngIf="!sideNavCollapsed()">{{ module.Descricao }}</span>
     </mat-list-item>
-    <ng-container *ngIf="module.showSubModules || isMenuItemClicked">
+    <ng-container *ngIf="module.showSubModules">
       <mat-list-item class="submodule-header" *ngFor="let subModule of module.subModulos">
         <span matListItemTitle [routerLink]="subModule.route">{{ subModule.Descricao }}</span>
       </mat-list-item>

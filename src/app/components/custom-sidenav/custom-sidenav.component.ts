@@ -30,7 +30,6 @@ export class CustomSidenavComponent implements OnInit {
 
   toggleSubModules(module: any): void {
     module.showSubModules = !module.showSubModules;
-    this.isMenuItemClicked = true;
   }
 
   getModules(): void {
